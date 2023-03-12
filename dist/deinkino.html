@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable = no">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="vbox">
+        <div class="north">
+            <div class="nav_container">
+                <div class="pg-nav-desktop-div">
+                    <nav id="pg-nav-desktop">
+                        <ul>
+                            <li>
+                                <p class="hover-underline-animation"><a href="index.html">Cinesthesia</a></p>
+                            </li>
+                            <li>
+                                <p class="hover-underline-animation"><a href="#three">Filme</a></p>
+                            </li>
+                            <li>
+                                <p class="hover-underline-animation"><a href="stuhl.html">Sessel</a></p>
+                            </li>
+                            <li>
+                                <p class="hover-underline-animation"><a href="#eight">Snacks</a></p>
+                            </li>
+                            <li>
+                                <p class="hover-underline-animation"><a href="#eleven">Account</a></p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="hbox">
+
+                <div class="center">
+
+                    <div class="deadcenter">
+
+                        <div class="button-container">
+                            <div class="button-matrix">
+                                <form action="http://127.0.0.1:5500/dist/buchung.html"><button class="matrix-button">
+                                        <p>Augsburg</p>
+                                    </button></form>
+                                <form action="http://127.0.0.1:5500/dist/buchung.html"><button class="matrix-button">
+                                        <p>Berlin</p>
+                                    </button></form>
+                                <form action="http://127.0.0.1:5500/dist/buchung.html"><button class="matrix-button">
+                                        <p>Bremen</p>
+                                    </button></form>
+                                <form action="http://127.0.0.1:5500/dist/buchung.html"><button class="matrix-button">
+                                        <p>Dresden</p>
+                                    </button></form>
+                                <form action="http://127.0.0.1:5500/dist/buchung.html"><button class="matrix-button">
+                                        <p>Freiburg</p>
+                                    </button></form>
+                                <form action="http://127.0.0.1:5500/dist/buchung.html"><button class="matrix-button">
+                                        <p>Halle</p>
+                                    </button></form>
+                                <form action="http://127.0.0.1:5500/dist/buchung.html"><button class="matrix-button">
+                                        <p>Hannover</p>
+                                    </button></form>
+                                <form action="http://127.0.0.1:5500/dist/buchung.html"><button class="matrix-button">
+                                        <p>Kiel</p>
+                                    </button></form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="south"></div>
+    </div>
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+
+
+    </script>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("button1").onclick = function () {
+                alert("Einstellungen gespeichert und angewendet.\n\n Vielen Dank für ihre Buchung");
+            }
+            document.getElementById("button2").onclick = function () {
+                alert("Einstellungen gespeichert und angewendet.\n\n Vielen Dank für ihre Buchung");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

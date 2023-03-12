@@ -1,0 +1,823 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    background-color: #121225;
+}
+
+
+a, a:active, a:visited { color: white; }
+
+/* Navigation*/
+
+/* Einstellungen für die Standard Desktop-Navigation*/
+#pg-nav-desktop {
+    text-align: center;
+    overflow: visible;
+    width: 50%;
+}
+
+#pg-nav-desktop > ul {
+    display: grid;
+    grid-template-areas: ". . . . .";    
+    list-style-type: none;
+    grid-gap: 25px;
+    padding-left: 20%;
+} 
+
+#pg-nav-desktop > ul li p a{
+    background-color: #202032;
+    color: #fafafa(0, 0, 0);
+    font-size: 1.25rem;
+    text-shadow: 0px 8px 16px 0px rgba(10, 10, 10, 0.295);
+    padding: 0px;
+    text-decoration-line: none;
+}
+
+a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration-line: none;
+  }
+  
+a:hover {
+    color: #733FF1;
+    background-color: transparent;
+    text-decoration-line: underline ;
+}
+
+.port-img-border > p a {
+    color: #fafafa(0, 0, 0);
+    font-size: 1.1rem;
+    text-shadow: 0px 8px 16px 0px rgba(10, 10, 10, 0.295);
+    padding: 0px;
+    text-decoration-line: none;
+}
+
+.port-img-border > p a:hover {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration-line: none ;
+}
+
+.hover-underline-animation {
+    display: flex;
+    position: relative;
+    color: #ffffff;
+}
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #733FF1;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+  
+a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration-line: none;
+}
+
+a:before{
+    color: white;
+    background-color: transparent;
+    text-decoration-line: none;
+}
+
+#pg-nav-desktop > ul li {
+    padding: 0px 0px;
+}
+
+.pg-nav-desktop-div {
+    background-color: #202032;
+    visibility: visible;    
+}
+
+.vbox {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+}
+
+.vbox .north {
+    background-color: #202032;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    min-height: 70px;
+    max-height: 75px;
+}
+
+.vbox .center {
+    background-color: #121225;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    max-height: fit-content;
+}
+
+.vbox .south {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-height: 50px;
+}
+
+.hbox {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 100%;
+}
+
+.hbox .west {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    min-width: 100px;
+}
+
+.hbox .center {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    overflow: hidden;
+    
+}
+
+
+.hbox .east {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    min-width: 100px;
+}
+
+
+html, body, .deadcenter {
+    height: 100%;
+}
+
+.deadcenter {
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+html, body, .nav_container {
+    height: 100%;
+}
+.nav_container {
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* slider */
+
+.slidecontainer {
+    display: grid;
+    grid-template-rows: '.' ;
+    grid-template-columns: auto ;
+    width: 100%; /* Width of the outside container */
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #ffffff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #733FF1;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #733FF1;
+    cursor: pointer;
+  }
+
+/* Buttons */
+
+.button-matrix3 {
+    padding-top: 20px;;
+    display: grid;
+    grid-gap: 80px;
+    padding-right: 80px;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-columns: 200px 100px 100px 100px ;
+  }
+
+.button-matrix2 {
+    padding-top: 20px;;
+    display: grid;
+    grid-gap: 80px;
+    grid-template-rows: 10px 10px 100px 100px;
+    grid-template-columns: 360px 20px 100px 100px ;
+  }
+
+.button-matrix {
+    padding-top: 20px;;
+    display: grid;
+    grid-gap: 80px;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px ;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+.flex-button {
+    background-color: #733FF1;
+    position: flex;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px 50px 50px 50px;
+    cursor: pointer;
+}
+.flex-button:hover {
+    border: 1px solid #ffffff;
+} 
+
+.flex-button > p {
+    cursor: pointer;
+}
+
+.matrix-button {
+    background-color: #733FF1;
+    position: flex;
+    border: none;
+    color: white;
+    min-width: 140px;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px 50px 50px 50px;
+    cursor: pointer;
+    overflow: auto;
+}
+
+.matrix-button:hover {
+    border: 1px solid #ffffff;
+} 
+
+.matrix-button > p {
+    cursor: pointer;
+}
+
+.uhr-button {
+    background-color: #202032;
+    position: flex;
+    border: 1px solid #ffffff;
+    color: white;
+    min-width: 140px;
+    max-height: 60px; 
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px 50px 50px 50px;
+    cursor: pointer;
+    overflow: auto;
+}
+
+.uhr-button:hover {
+    border: 1px solid #ffffff;
+}
+
+.uhr-button::after {
+    background-color: #733FF1;
+}
+
+.uhr-button > p {
+    cursor: pointer;
+}
+
+.dumb-button {
+    background-color: #733FF1;
+    position: absolute;
+    top: 750px;
+    left: 5%;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px 50px 50px 50px;
+    cursor: pointer;
+}
+
+.dumb-button:hover {
+    border: 1px solid #ffffff;
+} 
+
+.dumb-button > p {
+    cursor: pointer;
+}
+
+.ticket-button {
+    background-color: #733FF1;
+    position: absolute;
+    top: 530px;
+    left: 5%;
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px 50px 50px 50px;
+    cursor: pointer;
+}
+
+.ticket-button:hover {
+    border: 1px solid #ffffff;
+} 
+
+.ticket-button > p {
+    cursor: pointer;
+}
+
+/* Img-Bereich */
+.port-img{
+    content:url(../images/tierwesen_poster.jpg);
+    min-width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    object-position: 0px -50px ;
+    overflow: hidden;   
+    border-radius: 50px 50px 50px 50px;
+    
+}
+
+.port-img-border{
+    background-color: #121225;
+    min-width: 100%;
+    max-width: 600px;
+
+}
+
+.port-img-border > p {
+    position: absolute;
+    top: 300px;
+    left: 5%;
+    font-size: 1.1rem;
+    text-shadow: 0px 8px 16px 0px rgba(10, 10, 10, 0.295);
+    padding: 0px;
+    z-index: 30;
+    cursor: pointer;
+}
+
+.port-img-border > p:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #733FF1;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .port-img-border > p:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.dumbledore{
+    content:url(../images/tierwesen_poster.jpg);
+    object-fit: cover;
+    width: 700px;
+    height: 100vh;
+    overflow: hidden;
+    left: 5%;
+}
+
+.dumb-img-border{
+    background-color: #121225;
+    min-width: 100%;
+    max-width: 600px;
+
+}
+
+
+.dumb-img-border > p {
+    position: absolute;
+    top: 500px;
+    left: 5%;
+    font-size: 1.1rem;
+    text-shadow: 0px 8px 16px 0px rgba(10, 10, 10, 0.295);
+    padding: 0px;
+    z-index: 30;
+    cursor: pointer;
+}
+
+.dumb-img-border > p:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #733FF1;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .dumb-img-border > p:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.strange{
+    content:url(../images/doctor_strange.jpg);
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    max-width: 210px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.dog{
+    content:url(../images/dog.jpg);
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    max-width: 210px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.elvis{
+    content:url(../images/elvis.jpg);
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    max-width: 210px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.gesellschaft{
+    content:url(../images/geschlossene_gesellschaft.jpg);
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    max-width: 210px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.jurassic{
+    content:url(../images/jurassic.jpg);
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    max-width: 210px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.nick{
+    content:url(../images/kleiner_nick.jpg);
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    max-width: 210px;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* grid */
+
+.gridsection{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;
+    width: 100%;
+    row-gap: 0px;
+    column-gap: 0px;
+}
+
+.seatgrid{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto;
+    width: 100%;
+    grid-gap: 100px 100px;
+    overflow: auto;
+}
+
+/* seatmatrix */
+
+.matrix-board-legend {
+    padding-top: 20px;;
+    display: grid;
+    grid-template-rows: 35px 35px ;
+    grid-template-columns: 35px 35px ;
+  }
+
+.matrix-board {
+    padding-top: 20px;;
+    display: grid;
+    grid-template-rows: 35px 35px 35px 35px 35px 35px 35px 35px 35px;
+    grid-template-columns: 35px 35px 35px 35px 35px 35px 35px ;
+  }
+
+  .martix-container {
+    display: flex;
+    justify-content: center;
+  }
+  .matrix-box {
+    background-color:white;
+    border: 1px solid  hsla(0, 0%, 0%, 0.1);
+    box-shadow: 0 0.15em 0.175em hsla(0, 0%, 0%, 0.1);
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:5px;
+    font-size: 30px;
+    transition: 500ms;
+    transition-timing-function: ease;
+    border-color: #ffffff;
+  }
+
+  .matrix-box:enabled {
+    background-color: #733FF1;
+  }
+  .matrix-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.25);
+    transition: 500ms;
+    transition-timing-function: ease;
+  }
+
+/* Bereich in dem Grundparamenter für die tile-Klasse festgelegt werden.
+spezifischere Anpassungen für einzelne Tiles werden über eine Id geregelt,
+die der Reihe nach durchnumeriert werden */
+
+.tile {
+    display: flex;
+    background-color: #121225;
+    max-height: 700px;  
+    min-width: 250px; 
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; 
+}
+
+.mediumtile {
+    display: flex;
+    background-color: #121225;
+    max-height: 350px;  
+    min-width: 250px; 
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; 
+}
+
+.smalltile {
+    display: grid;
+    background-color: #ffffff;
+    max-height: 10%;  
+    max-width: 10%; 
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; 
+    padding: 5px;
+}
+
+.tile > p {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.tile > p:hover {
+    color: #733FF1;
+} 
+
+.gridspacer {
+    width: 200px;  
+}
+.gridspacer2 {
+    width: 400px;  
+}
+
+.smallspacer {
+    background-color: #ffffff;
+    width: 10%;
+    height: 10%;
+    padding: 5px;
+}
+
+#one {
+    background-color: #121225;
+    grid-column: 1/6;
+    grid-row: 1/2;
+    min-height: 600px;    
+}
+
+#oneseat {
+    background-color: #121225;
+    grid-column: 1/6;
+    grid-row: 1;
+    min-height: 250px;    
+}
+
+#two {
+    background-color: #121225;
+    grid-column: 1/2;
+    grid-row: 2/3; 
+}
+
+#three {
+    background-color: #121225;
+    grid-column: 2/3;
+    grid-row: 2/3; 
+}
+
+#four {
+    background-color: #121225;
+    grid-column: 3/4;
+    grid-row: 2/3; 
+}
+
+.mediumtile > #four {
+    min-width: 1000px;
+    overflow: visible;
+}
+
+#five {
+    background-color: #121225;
+    grid-column: 5/6;
+    grid-row: 2/3; 
+}
+
+#six {
+    background-color: #121225;
+    grid-column: 6/7;
+    grid-row: 3/4; 
+}
+
+#seven {
+    background-color: #121225;
+    grid-column: 1/2;
+    grid-row: 3/4; 
+}
+
+#eight {
+    background-color: #121225;
+    grid-column: 2/3;
+    grid-row: 3/4; 
+}
+
+#nine {
+    
+    grid-column: 2/4;
+    grid-row: 3/4; 
+}
+
+#ten {
+    background-color: #121225;
+    grid-column: 5/6;
+    grid-row: 3/4; 
+}
+
+#eleven {
+    background-color: #121225;
+    grid-column: 6/7;
+    grid-row: 3/4; 
+}
+
+#twelve {
+    background-color: #121225;
+    grid-column: 1/2;
+    grid-row: 4/5; 
+}
+
+#thirteen {
+    background-color: #121225;
+    grid-column: 1/2;
+    grid-row: 5/6; 
+}
+
+#button{
+    color: #ffffff;
+}
+
+#button-cont{
+    background-color: #121225;
+    grid-column: 1/3;
+    grid-row: 2/3; 
+}
+
+#poster{
+    background-color: #121225;
+    grid-column: 1/3;
+    grid-row: 1/6;
+    min-height: 100vh;    
+}
+
+#text{
+    background-color: #121225;
+    grid-column: 3/6;
+    grid-row: 3/6;
+    min-height: 600px;    
+}

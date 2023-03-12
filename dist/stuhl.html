@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable = no">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="vbox">
+        <div class="north">
+            <div class="nav_container">
+                <div class="pg-nav-desktop-div">
+                    <nav id="pg-nav-desktop">
+                        <ul>
+                            <li>
+                                <p class="hover-underline-animation"><a href="index.html">Cinesthesia</a></p>
+                            </li>
+                            <li>
+                                <p class="hover-underline-animation"><a href="#three">Filme</a></p>
+                            </li>
+                            <li>
+                                <p class="hover-underline-animation"><a href="stuhl.html">Sessel</a></p>
+                            </li>
+                            <li>
+                                <p class="hover-underline-animation"><a href="#eight">Snacks</a></p>
+                            </li>
+                            <li>
+                                <p class="hover-underline-animation"><a href="#eleven">Account</a></p>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="hbox">
+
+                <div class="center">
+                    <section class="gridsection">
+                        <div class="mediumtile" id="oneseat">
+                            <div class="gridspacer"></div>
+                        </div>
+
+
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="two">
+                                <div class="gridspacer"></div>
+
+                            </div>
+                        </div>
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="three">
+                                <div class="gridspacer" style="font-size: 0.9rem; text-align: right;">
+                                    <p>Größe
+                                        <br><br><br>
+                                        Ergonomie
+                                        <br><br><br>
+                                        Rückenlehne
+                                        <br><br><br>
+                                        Fußablage
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="four">
+                                <div class="slidecontainer">
+                                    <p><br></p>
+                                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    <p><br></p>
+                                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    <p><br></p>
+                                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    <p><br></p>
+                                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                    <p><br></p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="five">
+                                <div class="slidecontainer">
+                                    <form action="http://127.0.0.1:5500/dist/zahlung.html"><button
+                                            class="flex-button">
+                                            <p>Einstellungen speichern</p>
+                                        </button></form>
+                                    <p></p>
+                                    <form action="http://127.0.0.1:5500/dist/zahlung.html"><button
+                                            class="flex-button">
+                                            <p>Nur mit Größe fortfahren</p>
+                                        </button></form>
+                                    <p style="font-size: 0.47rem;">Mit dieser Option werden Einstellungen anhand ihrer
+                                        Größe festgelegt, empfohlen für unerfahrene Nutzer</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="six">
+                                <div class="gridspacer"></div>
+                            </div>
+                        </div>
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="seven">
+                                <div class="gridspacer"></div>
+                            </div>
+                        </div>
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="eight">
+                                <div class="gridspacer"></div>
+                            </div>
+                        </div>
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="nine">
+                                <div class="matrix-container">
+                                    <div class="gridspacer"></div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="ten">
+                                <div class="gridspacer"></div>
+                            </div>
+                        </div>
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="eleven">
+                                <div class="gridspacer"></div>
+                            </div>
+                        </div>
+                        <div class="deadcenter">
+                            <div class="mediumtile" id="twelve">
+                                <div class="gridspacer"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="south"></div>
+    </div>
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+
+
+    </script>
+
+    <script>
+        window.onload = function () {
+            document.getElementById("button1").onclick = function () {
+                alert("Einstellungen gespeichert und angewendet.\n\n Vielen Dank für ihre Buchung");
+            }
+            document.getElementById("button2").onclick = function () {
+                alert("Einstellungen gespeichert und angewendet.\n\n Vielen Dank für ihre Buchung");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
